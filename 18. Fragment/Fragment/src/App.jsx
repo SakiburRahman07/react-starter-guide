@@ -12,13 +12,15 @@ function App() {
   //   return <p>No food items available</p>;
   // }
 
+  let foodItems = ["Chia seeds", "Dal", "Vegetable", "Salat", "Ruti"];
+
   return (
     <React.Fragment>
       <h1>Healthy Food</h1>
 
       {/* {foodItems.length === 0 ? <p>No food items available</p> : null} */}
-      <ErrorMessage></ErrorMessage>
-      <FoodItems></FoodItems>
+      <ErrorMessage items={foodItems}></ErrorMessage>
+      <FoodItems items={foodItems}></FoodItems>
     </React.Fragment>
   );
 }
