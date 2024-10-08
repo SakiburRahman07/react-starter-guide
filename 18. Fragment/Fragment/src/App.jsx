@@ -1,7 +1,10 @@
 import React from "react";
 import FoodItems from "./component/FoodItems";
+import "./App.css";
 
 import ErrorMessage from "./component/ErrorMessage";
+
+import Container from "./component/Container";
 
 function App() {
   // let foodItems = ["Chia seeds", "Dal", "Vegetable", "Salat", "Ruti"];
@@ -15,13 +18,15 @@ function App() {
   let foodItems = ["Chia seeds", "Dal", "Vegetable", "Salat", "Ruti"];
 
   return (
-    <React.Fragment>
-      <h1>Healthy Food</h1>
+    <>
+      <Container>
+        <h1 className="food-heading">Healthy Food</h1>
+        <ErrorMessage items={foodItems}></ErrorMessage>
+        <FoodItems items={foodItems}></FoodItems>
+      </Container>
 
-      {/* {foodItems.length === 0 ? <p>No food items available</p> : null} */}
-      <ErrorMessage items={foodItems}></ErrorMessage>
-      <FoodItems items={foodItems}></FoodItems>
-    </React.Fragment>
+      <Container>Sakibur Rahman</Container>
+    </>
   );
 }
 
